@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adrian's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #121212;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('retro-wave-background.jpg') no-repeat center center/cover;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        header {
+            padding: 20px;
+            font-size: 2em;
+            text-shadow: 3px 3px 5px #00ffff;
+            animation: glowText 2s infinite alternate;
+        }
+
+        @keyframes glowText {
+            0% {
+                text-shadow: 3px 3px 5px #00ffff;
+            }
+
+            100% {
+                text-shadow: 5px 5px 10px #ff00ff;
+            }
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00ffff;
+        }
+
+        section {
+            padding: 50px;
+            border-bottom: 2px solid #00ffff;
+        }
+
+        .projects-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            flex-wrap: nowrap;
+        }
+
+        .project-card {
+            width: 500px;
+            height: 400px;
+            /* Increase height to accommodate text */
+            padding: 30px;
+            background: rgba(20, 20, 20, 0.9);
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.7);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            /* Keeps image on top, text below */
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            /* Fixed image height */
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .project-card:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 30px rgba(255, 0, 255, 0.9);
+        }
+
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-width: 80%;
+            margin: auto;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .skill {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 1.1em;
+            box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.5);
+        }
+
+        footer {
+            padding: 20px;
+            background: #000000;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="typed-text">Adrian Bryant</h1>
+        <p>Exploring Tech, Gaming & AI</p>
+    </header>
+
+    <nav>
+        <ul class="skill">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h2>About Me</h2>
+        <p class="skill">I'm Adrian Bryant, a tech enthusiast with a strong passion for gaming, AI, and software
+            development. With a
+            background in full-stack development, I love building creative and scalable solutions. My journey in tech is
+            driven by problem-solving, innovation, and a constant hunger for learning.</p>
+    </section>
+
+    <section id="projects">
+        <h2 class="skill">Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <img src="Pimage.png" alt="Hip-Hop Timeline">
+                <h3>Hip-Hop Timeline</h3>
+                <p>An interactive timeline that showcases the evolution of hip-hop culture, major artists, and historic
+                    moments. Users can search for an artist and see their contributions across the years.</p>
+                <a href="https://hiphoptimeline.vercel.app" target="_blank">View Project</a>
+            </div>
+            <div class="project-card">
+                <img src="P2image.png" alt="Pokedex">
+                <h3>Pokedex</h3>
+                <p>A full-stack Pokedex application that allows users to search for Pokémon using the PokeAPI. Features
+                    include user authentication, pagination for smooth browsing, and dynamic search functionality to
+                    quickly find Pokémon details.</p>
+                <a href="https://yourprojectlink.com" target="_blank">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Python</span>
+            <span class="skill">React</span>
+            <span class="skill">Redux-Saga</span>
+            <span class="skill">Bootstrap</span>
+            <span class="skill">Node.js</span>
+            <span class="skill">Express.js</span>
+            <span class="skill">SQL</span>
+            <span class="skill">PostgreSQL</span>
+            <span class="skill">REST APIs</span>
+            <span class="skill">Java</span>
+            <span class="skill">Git</span>
+            <span class="skill">GitHub</span>
+            <span class="skill">Passport Authentication</span>
+            <span class="skill">Docker</span>
+            <span class="skill">Postico</span>
+            <span class="skill">Redis</span>
+            <span class="skill">Heroku</span>
+            <span class="skill">Agile</span>
+            <span class="skill">JEST</span>
+        </div>
+    </section>
+
+    <footer>
+        <section id="resume">
+            <h2 class="skill">Resume</h2>
+            <a class="skill" href="Resume.pdf" download>Download My Resume</a>
+        </section>
+
+        <section id="contact">
+            <h2 class="skill">Contact</h2>
+            <p>Email: <a href="mailto:bryant.adrian94@gmail.com">bryant.adrian94@gmail.com</a></p>
+            <p><a href="https://github.com/Bles-t" target="_blank">GitHub</a></p>
+            <p><a href="https://www.linkedin.com/in/adrian-bryant-04094ab8/" target="_blank">LinkedIn</a></p>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Adrian Bryant</p>
+        </footer>
+</body>
+
+</html>
